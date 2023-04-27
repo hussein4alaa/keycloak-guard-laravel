@@ -16,6 +16,8 @@ K_REALM_PUBLIC_KEY=
 K_LOAD_USER_FROM_DATABASE=true # get user data from database or keycloak
 K_USER_PROVIDER_CREDENTIAL=username # This setting specifies the unique column name in your user provider table that will be used to retrieve the user's credentials for authentication.
 K_TOKEN_PRINCIPAL_ATTRIBUTE=preferred_username # This setting specifies the key name for the attribute in the Keycloak token that will be used to check against the unique column specified in K_USER_PROVIDER_CREDENTIAL. The attribute should contain the user's unique identifier, such as a username or email address.
+K_TOKEN_EXPIRED=false # Enable this when you are sure that you have set the Keycloak server time correctly.
+
 ```
 
 You also need to configure your Laravel application to use the keycloak guard. To do this, add the following to your `config/auth.php` file:
