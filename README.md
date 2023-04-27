@@ -1,6 +1,9 @@
 # Keycloak Guard Laravel Package
 The keycloak-guard-laravel package provides an integration between the Keycloak authentication server and a Laravel application. It allows you to use Keycloak as the authentication provider for your Laravel application.
 
+![image](https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_048daf32d4748a4dcd8a38617af4ff85/keycloak.png)
+
+
 Installation
 You can install the package using Composer:
 
@@ -8,6 +11,13 @@ You can install the package using Composer:
 ```sh
 composer require g4t/keycloak
 ```
+
+now publish config file
+run following command
+```sh
+php artisan vendor:publish
+```
+and select `g4t\Keycloak\KeycloakGuardServiceProvider` provider
 
 # Configuration
 To configure the package, you need to add your Keycloak server details to your Laravel .env file:
@@ -17,7 +27,6 @@ K_LOAD_USER_FROM_DATABASE=true # get user data from database or keycloak
 K_USER_PROVIDER_CREDENTIAL=username # This setting specifies the unique column name in your user provider table that will be used to retrieve the user's credentials for authentication.
 K_TOKEN_PRINCIPAL_ATTRIBUTE=preferred_username # This setting specifies the key name for the attribute in the Keycloak token that will be used to check against the unique column specified in K_USER_PROVIDER_CREDENTIAL. The attribute should contain the user's unique identifier, such as a username or email address.
 K_TOKEN_EXPIRED=false # Enable this when you are sure that you have set the Keycloak server time correctly.
-
 ```
 
 You also need to configure your Laravel application to use the keycloak guard. To do this, add the following to your `config/auth.php` file:
