@@ -1,6 +1,9 @@
 # Keycloak Guard Laravel Package
 The keycloak-guard-laravel package provides an integration between the Keycloak authentication server and a Laravel application. It allows you to use Keycloak as the authentication provider for your Laravel application.
 
+![image](https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_048daf32d4748a4dcd8a38617af4ff85/keycloak.png)
+
+
 Installation
 You can install the package using Composer:
 
