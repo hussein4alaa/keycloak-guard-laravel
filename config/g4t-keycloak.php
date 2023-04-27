@@ -11,4 +11,6 @@ return [
 
     'load_user_from_database' => env('K_LOAD_USER_FROM_DATABASE', false),
 
+    'make_keycloak_token_expired' => env('K_TOKEN_EXPIRED', false),
+
 ];
