@@ -11,8 +11,8 @@
             "email": "hussein4alaa@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
+    "license": "MIT",
+    "minimum-stability": "stable",
     "require": {
         "firebase/php-jwt": "^6.3",
         "php": "^8.0"
