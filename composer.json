@@ -1,0 +1,27 @@
+{
+    "name": "g4t/keycloak",
+    "autoload": {
+        "psr-4": {
+            "g4t\\Keycloak\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hussein Alaa",
+            "email": "hussein4alaa@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "firebase/php-jwt": "^6.3",
+        "php": "^8.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "g4t\\Keycloak\\KeycloakGuardServiceProvider"
+            ]
+        }
+    }
+}
