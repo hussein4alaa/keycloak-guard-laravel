@@ -12,6 +12,13 @@ You can install the package using Composer:
 composer require g4t/keycloak
 ```
 
+now publish config file
+run following command
+```sh
+php artisan vendor:publish
+```
+and select `g4t\Keycloak\KeycloakGuardServiceProvider` provider
+
 # Configuration
 To configure the package, you need to add your Keycloak server details to your Laravel .env file:
 ```sh
