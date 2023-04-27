@@ -89,4 +89,23 @@ class KeycloakGuard implements Guard
     {
         $this->user = $user;
     }
+    
+    
+    public function attempt(array $credentials)
+    {
+        if(!array_key_exists('url', $credentials)) {
+            return response()->json(["message" => "url required"], Response::HTTP_UNPROCESSABLE_ENTITY);
+        } else if (!array_key_exists('realm', $credentials)) {
+            return response()->json(["message" => "realm required"], Response::HTTP_UNPROCESSABLE_ENTITY);
+        }
+
+        $url = $credentials['url']."/realms/".$credentials['realm']."/protocol/openid-connect/token";
+
+        unset($credentials['url'], $credentials['realm']);
+
+        $response = Http::asForm()->post($url, $credentials)->json();
+
+        return $response;
+    }
+
 }
